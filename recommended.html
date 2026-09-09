@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Recommended Items - Spike Shop</title>
+
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f7fb;
+            color: #222;
+        }
+
+
+        /* Header */
+
+        header {
+            background: linear-gradient(
+                135deg,
+                #111827,
+                #2563eb
+            );
+
+            color: white;
+
+            padding: 20px 7%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 25px;
+            font-weight: bold;
+        }
+
+
+        nav a:hover {
+            color: #93c5fd;
+        }
+
+
+        /* Page Title */
+
+        .page-title {
+            text-align: center;
+            padding: 60px 20px 30px;
+        }
+
+
+        .page-title h1 {
+            font-size: 42px;
+            margin-bottom: 10px;
+        }
+
+
+        .page-title p {
+            color: #666;
+            font-size: 17px;
+        }
+
+
+        /* Back Button */
+
+        .back-container {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+
+        .back-button {
+            display: inline-block;
+
+            padding: 10px 22px;
+
+            background: #111827;
+            color: white;
+
+            text-decoration: none;
+
+            border-radius: 25px;
+
+            font-weight: bold;
+        }
+
+
+        .back-button:hover {
+            background: #2563eb;
+        }
+
+
+        /* Items */
+
+        .items {
+
+            width: 86%;
+            max-width: 1200px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 50px;
+
+            padding-bottom: 70px;
+        }
+
+
+        /* Item Card */
+
+        .item-card {
+
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+
+        .item-card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.15);
+        }
+
+
+        /* Image */
+
+        .item-image {
+
+            width: 100%;
+            height: 300px;
+
+            background: #222;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+
+        .item-image img {
+
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+        }
+
+
+        /* Information */
+
+        .item-info {
+
+            padding: 20px;
+        }
+
+
+        .recommended-label {
+
+            display: inline-block;
+
+            padding: 6px 12px;
+
+            margin-bottom: 10px;
+
+            border-radius: 20px;
+
+            background: #fff3cd;
+
+            color: #d97706;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+
+        .item-info h2 {
+
+            font-size: 23px;
+
+            margin-bottom: 10px;
+        }
+
+
+        .description {
+
+            color: #777;
+
+            line-height: 1.6;
+
+            font-size: 14px;
+        }
+
+
+        /* Price */
+
+        .price {
+
+            margin-top: 18px;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            color: #2563eb;
+        }
+
+
+        /* Footer */
+
+        footer {
+
+            background: #111827;
+
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 30px;
+        }
+
+
+        footer strong {
+            color: white;
+        }
+
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+
+            nav {
+                display: none;
+            }
+
+            .page-title h1 {
+                font-size: 34px;
+            }
+
+            .item-image {
+                height: 260px;
+            }
+        }
+
+    </style>
+
+</head>
+<!-- Page Title -->
+
+    <section class="page-title">
+
+        <h1>
+            Recommended Items
+        </h1>
+
+        <p>
+            Check out our recommended game items.
+        </p>
+
+    </section>
+
+
+    <!-- Back Button -->
+
+    <div class="back-container">
+
+        <a href="index.html"
+           class="back-button">
+
+            ← Back to Home
+
+        </a>
+
+    </div>
+
+
+    <!-- Items -->
+	
+	<section class="items">
+
+
+        <!-- Beginner Package -->
+
+        <div class="item-card">
+
+
+            <div class="item-image">
+
+                <img
+                    src="images/Beginner Package.png"
+                    alt="Beginner Package">
+
+            </div>
+
+
+            <div class="item-info">
+
+                <span class="recommended-label">
+                    ⭐ RECOMMENDED
+                </span>
+
+
+                <h2>
+                    Beginner Package
+                </h2>
+
+
+                <p class="description">
+
+		<p>x300 vp</p>
+		<p>x100,000 credit</p>
+		<p>x60,000 exp</p>
+		<p>Youngsub</p>
+		<p>Ads remove</p>
+
+                </p>
+
+
+                <div class="price">
+
+                    33,000 mmk
+
+                </div>
+
+            </div>
+
+	<!-- Pro Package -->
+	
+        <div class="item-card">
+
+            <div class="item-image">
+
+                <img
+                    src="images/Pro Package.png"
+                    alt="Pro Package">
+
+            </div>
+	
+
+            <div class="item-info">
+
+                <span class="recommended-label">
+                    ⭐ RECOMMENDED
+                </span>
+
+
+                <h2>
+                    Pro Package
+                </h2>
+
+
+                <p class="description">
+
+		<p>x2000 vp</p>
+		<p>x1000 Blue flames</p>
+		<p>x300 Basic scout cards</p>
+
+                </p>
+
+
+                <div class="price">
+
+                    149,700 mmk
+
+                </div>
+
+            </div>
+
+
+        </div>
+		<!-- Player Recruitment Package -->
+            
+        <div class="item-card">
+
+		<div class="item-image">
+
+                <img
+                    src="images/Player Recruitment Package.png"
+                    alt="Player Recruitment Package">
+
+            </div>
+	
+
+            <div class="item-info">
+		<span class="recommended-label">
+                    ⭐ RECOMMENDED
+                </span>
+
+                <h2>
+                   Player Recruitment Package
+                </h2>
+
+
+                <p class="description">
+
+		<p>x1500 vp</p>
+
+                <div class="price">
+
+                    59,700 mmk
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+	<!-- Remove Ads -->
+            <div class="item-image">
+
+                <img
+                    src="images/Remove Ads.png"
+                    alt="Remove Ads">
+
+            </div>
+	
+
+            <div class="item-info">
+		<span class="recommended-label">
+                    ⭐ RECOMMENDED
+                </span>
+
+                <h2>
+                   Remove Ads
+                </h2>
+
+
+                <p class="description">
+
+		<p>Remove Ads</p>
+
+                <div class="price">
+
+                   16,500 mmk
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+ 
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            <strong>THE SPIKE CROSS ITEMS<br>@hyouma</strong>
+        </p>
+
+        </footer>
