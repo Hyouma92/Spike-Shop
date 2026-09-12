@@ -5,20 +5,14 @@
 
     <meta charset="UTF-8">
 
-    <!-- Android + iPhone responsive -->
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
 
     <meta name="theme-color" content="#111827">
 
-    <title>TSC MYANMAR - The Spike Cross</title>
-
+    <title>Recommended Items - TSC MYANMAR</title>
 
     <style>
-
-        /* =========================
-           RESET
-        ========================= */
 
         * {
             margin: 0;
@@ -26,94 +20,51 @@
             box-sizing: border-box;
         }
 
-
-        html {
-            width: 100%;
-            overflow-x: hidden;
-        }
-
-
         body {
-            width: 100%;
-            min-height: 100vh;
-
             font-family: Arial, Helvetica, sans-serif;
-
             background: #f5f7fb;
-
             color: #222;
-
             overflow-x: hidden;
-
-            /* iPhone safe area */
-            padding-bottom: env(safe-area-inset-bottom);
         }
 
-
-        /* =========================
-           HEADER
-        ========================= */
+        /* HEADER */
 
         header {
-            width: 100%;
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #111827,
-                    #2563eb
-                );
+            background: linear-gradient(
+                135deg,
+                #111827,
+                #2563eb
+            );
 
             color: white;
 
             padding: 18px 5%;
 
             display: flex;
-
             justify-content: space-between;
-
             align-items: center;
 
             gap: 20px;
-
-            box-shadow:
-                0 4px 15px rgba(0,0,0,0.15);
         }
-
 
         .logo {
             font-size: 24px;
-
             font-weight: bold;
-
             white-space: nowrap;
         }
 
-
-        /* =========================
-           NAVIGATION
-        ========================= */
-
         nav {
             display: flex;
-
-            align-items: center;
-
             gap: 8px;
-
             flex-wrap: wrap;
-
             justify-content: center;
         }
 
-
         nav a {
             color: white;
-
             text-decoration: none;
 
             font-weight: bold;
-
             font-size: 14px;
 
             padding: 10px 13px;
@@ -121,280 +72,343 @@
             border-radius: 10px;
 
             transition: 0.3s;
-
-            /* Better touch area */
-            min-height: 44px;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            white-space: nowrap;
         }
-
 
         nav a:hover {
             background: rgba(255,255,255,0.15);
-
             color: #bfdbfe;
         }
 
 
-        nav a:active {
-            transform: scale(0.96);
-        }
+        /* PAGE TITLE */
 
-
-        /* =========================
-           MAIN
-        ========================= */
-
-        main {
-            width: 100%;
-        }
-
-
-        .image-info {
-            width: 100%;
-
-            max-width: 1000px;
-
-            margin: auto;
-
+        .page-title {
             text-align: center;
+            padding: 50px 20px 25px;
+        }
 
-            padding:
-                60px 20px 80px;
+        .page-title h1 {
+            font-size: 40px;
+            color: #111827;
+            margin-bottom: 10px;
+        }
+
+        .page-title p {
+            color: #666;
+            font-size: 16px;
         }
 
 
-        /* =========================
-           LOGO IMAGE
-        ========================= */
+        /* BACK BUTTON */
 
-        .image-info img {
-            display: block;
+        .back-container {
+            text-align: center;
+            margin-bottom: 35px;
+        }
 
-            width: 220px;
+        .back-button {
+            display: inline-block;
 
-            height: 220px;
+            padding: 11px 22px;
 
-            max-width: 75vw;
+            background: #111827;
+            color: white;
 
-            max-height: 75vw;
+            text-decoration: none;
 
-            object-fit: cover;
+            border-radius: 25px;
 
-            margin:
-                0 auto 35px;
-
-            border-radius: 50%;
-
-            padding: 8px;
-
-            background: white;
-
-            box-shadow:
-                0 10px 30px
-                rgba(0,0,0,0.15);
+            font-weight: bold;
 
             transition: 0.3s;
         }
 
-
-        .image-info img:hover {
-            transform: scale(1.05);
+        .back-button:hover {
+            background: #2563eb;
         }
 
 
-        /* =========================
-           TITLE
-        ========================= */
+        /* ITEMS */
 
-        .image-info h1 {
-            font-size: 42px;
+        .items {
+            width: 90%;
+            max-width: 1200px;
 
-            line-height: 1.2;
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 25px;
+
+            padding-bottom: 70px;
+        }
+
+
+        /* ITEM CARD */
+
+        .item-card {
+            background: white;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            box-shadow:
+                0 8px 25px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .item-card:hover {
+            transform: translateY(-7px);
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.15);
+        }
+
+
+        /* IMAGE */
+
+        .item-image {
+            width: 100%;
+            height: 280px;
+
+            background: #222;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            overflow: hidden;
+        }
+
+        .item-image img {
+            width: 100%;
+            height: 100%;
+
+            object-fit: cover;
+
+            display: block;
+        }
+
+
+        /* INFORMATION */
+
+        .item-info {
+            padding: 20px;
+        }
+
+        .recommended-label {
+            display: inline-block;
+
+            padding: 6px 12px;
+
+            margin-bottom: 10px;
+
+            border-radius: 20px;
+
+            background: #fff3cd;
+            color: #d97706;
+
+            font-size: 12px;
+
+            font-weight: bold;
+        }
+
+        .item-info h2 {
+            font-size: 22px;
+
+            margin-bottom: 12px;
 
             color: #111827;
-
-            margin-bottom: 18px;
         }
 
-
-        /* =========================
-           DESCRIPTION
-        ========================= */
-
-        .image-info h2 {
-            font-size: 18px;
-
-            font-weight: normal;
+        .description {
+            color: #777;
 
             line-height: 1.8;
 
-            color: #666;
+            font-size: 14px;
+        }
+
+        .description p {
+            margin-bottom: 3px;
         }
 
 
-        /* =========================
-           FOOTER
-        ========================= */
+        /* PRICE */
+
+        .price {
+            margin-top: 18px;
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            color: #2563eb;
+        }
+
+
+        /* FOOTER */
 
         footer {
-            width: 100%;
-
             background: #111827;
 
             color: #aaa;
 
             text-align: center;
 
-            padding:
-                30px 20px;
-
-            margin-top: 20px;
-
-            padding-bottom:
-                calc(30px + env(safe-area-inset-bottom));
+            padding: 30px 20px;
         }
-
 
         footer strong {
             color: white;
-
             line-height: 1.8;
         }
 
 
-        /* ==================================================
-           TABLET
-        ================================================== */
-
-        @media screen
-        and (min-width: 769px)
-        and (max-width: 1100px) {
-
-            header {
-                padding: 18px 3%;
-            }
-
-
-            nav a {
-                font-size: 13px;
-            }
-
-
-            .image-info h1 {
-                font-size: 38px;
-            }
-
-        }
-
-
-        /* ==================================================
-           MOBILE
-           Android + iPhone
-        ================================================== */
+        /* MOBILE */
 
         @media screen and (max-width: 768px) {
 
             header {
                 display: block;
-
-                padding:
-                    16px 12px;
+                padding: 16px 12px;
             }
-
-
-            /* Logo */
 
             .logo {
                 text-align: center;
-
                 font-size: 21px;
-
                 margin-bottom: 14px;
             }
-
-
-            /* Navigation */
 
             nav {
                 width: 100%;
 
-                display: flex;
+                display: grid;
 
-                flex-wrap: nowrap;
-
-                justify-content: flex-start;
+                grid-template-columns:
+                    repeat(2, 1fr);
 
                 gap: 8px;
-
-                overflow-x: auto;
-
-                overflow-y: hidden;
-
-                padding-bottom: 5px;
-
-                /* Smooth scrolling on iPhone */
-                -webkit-overflow-scrolling: touch;
-
-                scrollbar-width: none;
             }
-
-
-            nav::-webkit-scrollbar {
-                display: none;
-            }
-
 
             nav a {
-                flex: 0 0 auto;
+                width: 100%;
+
+                text-align: center;
 
                 background:
                     rgba(255,255,255,0.12);
 
-                font-size: 13px;
-
-                padding:
-                    11px 14px;
-
                 min-height: 44px;
 
-                border-radius: 10px;
+                display: flex;
+
+                align-items: center;
+
+                justify-content: center;
+
+                font-size: 13px;
             }
 
-
-            /* Main */
-
-            .image-info {
-                padding:
-                    45px 18px 60px;
+            .page-title {
+                padding: 40px 15px 25px;
             }
 
-
-            /* Image */
-
-            .image-info img {
-                width: 180px;
-
-                height: 180px;
-
-                margin-bottom: 28px;
+            .page-title h1 {
+                font-size: 32px;
             }
 
+            .page-title p {
+                font-size: 14px;
+            }
 
-            /* Title */
+            .items {
+                width: 92%;
 
-            .image-info h1 {
-                font-size: 32px
-				</style>
-		</head>
-	<body>
-<!-- Page Title -->
+                grid-template-columns: 1fr;
+
+                gap: 20px;
+            }
+
+            .item-image {
+                height: 300px;
+            }
+
+            .item-info h2 {
+                font-size: 21px;
+            }
+
+        }
+
+
+        /* SMALL PHONE */
+
+        @media screen and (max-width: 400px) {
+
+            .logo {
+                font-size: 19px;
+            }
+
+            nav a {
+                font-size: 12px;
+            }
+
+            .page-title h1 {
+                font-size: 27px;
+            }
+
+            .item-image {
+                height: 260px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+            🏐 TSC MYANMAR
+        </div>
+
+        <nav>
+
+            <a href="recommended.html">
+                Recommended
+            </a>
+
+            <a href="weakly & monthly.html">
+                Weekly & Monthly
+            </a>
+
+            <a href="basic.html">
+                Basic
+            </a>
+
+            <a href="colosseum.html">
+                Colosseum
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- PAGE TITLE -->
 
     <section class="page-title">
 
@@ -409,7 +423,7 @@
     </section>
 
 
-    <!-- Back Button -->
+    <!-- BACK BUTTON -->
 
     <div class="back-container">
 
@@ -423,15 +437,14 @@
     </div>
 
 
-    <!-- Items -->
-	
-	<section class="items">
+    <!-- ITEMS -->
+
+    <section class="items">
 
 
         <!-- Beginner Package -->
 
         <div class="item-card">
-
 
             <div class="item-image">
 
@@ -441,40 +454,37 @@
 
             </div>
 
-
             <div class="item-info">
 
                 <span class="recommended-label">
                     ⭐ RECOMMENDED
                 </span>
 
-
                 <h2>
                     Beginner Package
                 </h2>
 
+                <div class="description">
 
-                <p class="description">
+                    <p>x300 VP</p>
+                    <p>x100,000 Credit</p>
+                    <p>x60,000 EXP</p>
+                    <p>Youngsub</p>
+                    <p>Ads Remove</p>
 
-		<p>x300 vp</p>
-		<p>x100,000 credit</p>
-		<p>x60,000 exp</p>
-		<p>Youngsub</p>
-		<p>Ads remove</p>
-
-                </p>
-
+                </div>
 
                 <div class="price">
-
-                    33,000 mmk
-
+                    33,000 MMK
                 </div>
 
             </div>
 
-	<!-- Pro Package -->
-	
+        </div>
+
+
+        <!-- Pro Package -->
+
         <div class="item-card">
 
             <div class="item-image">
@@ -484,7 +494,6 @@
                     alt="Pro Package">
 
             </div>
-	
 
             <div class="item-info">
 
@@ -492,70 +501,68 @@
                     ⭐ RECOMMENDED
                 </span>
 
-
                 <h2>
                     Pro Package
                 </h2>
 
+                <div class="description">
 
-                <p class="description">
+                    <p>x2000 VP</p>
+                    <p>x1000 Blue Flames</p>
+                    <p>x300 Basic Scout Cards</p>
 
-		<p>x2000 vp</p>
-		<p>x1000 Blue flames</p>
-		<p>x300 Basic scout cards</p>
-
-                </p>
-
+                </div>
 
                 <div class="price">
-
-                    149,700 mmk
-
+                    149,700 MMK
                 </div>
 
             </div>
 
-
         </div>
-		<!-- Player Recruitment Package -->
-            
+
+
+        <!-- Player Recruitment Package -->
+
         <div class="item-card">
 
-		<div class="item-image">
+            <div class="item-image">
 
                 <img
                     src="Player Recruitment Package.png"
                     alt="Player Recruitment Package">
 
             </div>
-	
 
             <div class="item-info">
-		<span class="recommended-label">
+
+                <span class="recommended-label">
                     ⭐ RECOMMENDED
                 </span>
 
                 <h2>
-                   Player Recruitment Package
+                    Player Recruitment Package
                 </h2>
 
+                <div class="description">
 
-                <p class="description">
+                    <p>x1500 VP</p>
 
-		<p>x1500 vp</p>
+                </div>
 
                 <div class="price">
-
-                    59,700 mmk
-
+                    59,700 MMK
                 </div>
 
             </div>
 
-
         </div>
 
-	<!-- Remove Ads -->
+
+        <!-- Remove Ads -->
+
+        <div class="item-card">
+
             <div class="item-image">
 
                 <img
@@ -563,44 +570,49 @@
                     alt="Remove Ads">
 
             </div>
-	
 
             <div class="item-info">
-		<span class="recommended-label">
+
+                <span class="recommended-label">
                     ⭐ RECOMMENDED
                 </span>
 
                 <h2>
-                   Remove Ads
+                    Remove Ads
                 </h2>
 
+                <div class="description">
 
-                <p class="description">
-
-		<p>Remove Ads</p>
-
-                <div class="price">
-
-                   16,500 mmk
+                    <p>Remove Ads</p>
 
                 </div>
 
-            </div>
+                <div class="price">
+                    16,500 MMK
+                </div>
 
+            </div>
 
         </div>
 
 
     </section>
-	</body>
- 
 
-    <!-- Footer -->
+
+    <!-- FOOTER -->
 
     <footer>
 
         <p>
-            <strong>THE SPIKE CROSS ITEMS<br>@hyouma</strong>
+            <strong>
+                THE SPIKE CROSS ITEMS<br>
+                @hyouma
+            </strong>
         </p>
 
-        </footer>
+    </footer>
+
+
+</body>
+
+</html>
